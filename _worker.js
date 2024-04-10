@@ -3,7 +3,7 @@
 
 let mytoken= ['auto'];//快速订阅访问入口, 留空则不启动快速订阅
 
-// 设置优选地址，不带端口号默认443，TLS订阅生成
+// 设置优选地址，不带端口号默认8443，TLS订阅生成
 let addresses = [
 	'icook.tw:2053#官方优选域名',
 	'cloudflare.cfgo.cc#优选官方线路',
@@ -15,7 +15,7 @@ let addressesapi = [
 	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesipv6api.txt', //IPv6优选内容格式 自行搭建。
 ];
 
-// 设置优选地址，不带端口号默认80，noTLS订阅生成
+// 设置优选地址，不带端口号默认8880，noTLS订阅生成
 let addressesnotls = [
 	'www.visa.com.sg#官方优选域名',
 	'www.wto.org:8080#官方优选域名',
@@ -488,7 +488,7 @@ export default {
 				const uniqueAddressesnotls = [...new Set(addressesnotls)];
 
 				notlsresponseBody = uniqueAddressesnotls.map(address => {
-					let port = "80";
+					let port = "8880";
 					let addressid = address;
 				
 					const match = addressid.match(regex);
@@ -551,7 +551,7 @@ export default {
 			}
 
 			const responseBody = uniqueAddresses.map(address => {
-				let port = "443";
+				let port = "8443";
 				let addressid = address;
 			
 				const match = addressid.match(regex);
