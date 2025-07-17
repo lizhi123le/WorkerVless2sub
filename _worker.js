@@ -41,7 +41,7 @@ let 更新时间 = 3;
 let MamaJustKilledAMan = ['telegram', 'twitter', 'miaoko'];
 let proxyIPPool = [];
 let socks5Data;
-let alpn = 'h3';
+let alpn = 'h3,h2';
 let 网络备案 = `<a href='https://t.me/CMLiussss'>萌ICP备-20240707号</a>`;//写你自己的维护者广告
 let 额外ID = '0';
 let 加密方式 = 'auto';
@@ -1428,7 +1428,7 @@ async function subHtml(request) {
 								const path = vmessJson.path || '/';
 								const sni = vmessJson.sni || host;
 								const type = vmessJson.type || 'none';
-								const alpn = vmessJson.alpn || '';
+								const alpn = vmessJson.alpn || 'h3,h2';
 								const alterId = vmessJson.aid || 0;
 								const security = vmessJson.scy || 'auto';
 								const domain = window.location.hostname;
