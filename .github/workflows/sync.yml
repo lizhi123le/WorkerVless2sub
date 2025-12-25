@@ -11,6 +11,7 @@ on:
     branches: 
       - main 
     paths: 
+      - '.github/**/*.yml'
       - 'addressesapi.txt'
 
 jobs:
