@@ -12,7 +12,6 @@ on:
       - main 
     paths: 
       - '.github/**/*.yml'
-      - 'addressesapi.txt'
 
 jobs:
   sync_latest_from_upstream:
